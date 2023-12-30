@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile of Cattle</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color:#E0D800;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #FFFFCC;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #E0D800;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #E0D800;
+            color: #FFFFFF;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+        }
+
+        button[type="button"] {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Profile of Cattle</h1>
+
+    <h2>Add Record</h2>
+    <form id="add-form" method="POST">
+        <label for="cow-a-milk-production">Milk Production:</label>
+        <input type="text" id="cow-a-milk-production" name="cow-a-milk-production" required><br>
+
+        <label for="diet-plans">Diet Plans:</label>
+        <input type="text" id="diet-plans" name="diet-plans" required><br>
+
+        <label for="medical-history">Medical History:</label>
+        <input type="text" id="medical-history" name="medical-history" required><br>
+
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Update Record</h2>
+    <form id="update-form" method="POST">
+        <label for="record-id">Record ID:</label>
+        <input type="text" id="record-id" name="record-id" required><br>
+
+        <!-- Display existing record details here -->
+
+        <button type="submit">Update</button>
+        <button type="button" onclick="clearUpdateForm()">Clear</button>
+    </form>
+
+    <h2>Delete Record</h2>
+    <form id="delete-form" method="POST">
+        <label for="record-id">Record ID:</label>
+        <input type="text" id="record-id" name="record-id" required><br>
+
+        <button type="submit">Delete</button>
+    </form>
+
+    <script>
+        function clearUpdateForm() {
+            document.getElementById("update-form").reset();
+        }
+    </script>
+</body>
+
+</html>

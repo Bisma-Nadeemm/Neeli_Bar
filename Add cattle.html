@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile of Cattle</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Rest of the styles omitted for brevity */
+
+        .section-heading {
+            color: #E0D800;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <!-- Header content omitted for brevity -->
+    </div>
+
+    <div class="content">
+        <div class="section-heading">Profile of Cattle</div>
+
+        <div class="box">
+            <div>
+                <h3 class="groupName">Number of Cows</h3>
+                <input type="number" name="number-of-cows" id="number-of-cows" placeholder="Enter the number of cows">
+            </div>
+            <div>
+                <h3 class="groupName">Milk Production (Overall)</h3>
+                <input type="text" name="milk-production-overall" id="milk-production-overall" placeholder="Enter the milk production overall">
+            </div>
+            <div>
+                <h3 class="groupName">Milk Production (Individual)</h3>
+                <input type="text" name="cow-a-milk-production" id="cow-a-milk-production" placeholder="Cow A milk production">
+                <input type="text" name="cow-b-milk-production" id="cow-b-milk-production" placeholder="Cow B milk production">
+                <input type="text" name="cow-c-milk-production" id="cow-c-milk-production" placeholder="Cow C milk production">
+            </div>
+        </div>
+
+        <div class="section-heading">Diet Plans</div>
+        <input type="text" name="diet-plan-1" id="diet-plan-1" placeholder="Diet Plan 1">
+        <input type="text" name="diet-plan-2" id="diet-plan-2" placeholder="Diet Plan 2">
+        <input type="text" name="diet-plan-3" id="diet-plan-3" placeholder="Diet Plan 3">
+
+        <div class="section-heading">Medical History</div>
+        <div class="scroll">
+            <input type="text" name="cow-a-medical-history" id="cow-a-medical-history" placeholder="Cow A Medical History">
+            <hr>
+            <input type="text" name="cow-b-medical-history" id="cow-b-medical-history" placeholder="Cow B Medical History">
+            <hr>
+            <input type="text" name="cow-c-medical-history" id="cow-c-medical-history" placeholder="Cow C Medical History">
+        </div>
+    </div>
+</body>
+
+</html>

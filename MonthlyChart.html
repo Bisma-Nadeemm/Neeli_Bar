@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #cowPerformanceChart {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cowPerformanceChart"></canvas>
+
+    <script>
+        var labels = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+        var chartData = [ [120, 150, 180, 90, 200],
+                          [110, 130, 100, 70, 190],
+                          [90, 120, 160, 110, 150],
+                          [130, 100, 170, 140, 120] ];
+        var ctx = document.getElementById('cowPerformanceChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Milk (Liters)',
+                    data: chartData,
+                    backgroundColor: ['blue', 'green', 'orange', 'purple', 'red'],
+                    barThickness: 20,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "Monthly Milk Production",
+                        font: {
+                            size: 15,
+                            style: 'italic'
+                        },
+                        align: 'end'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
